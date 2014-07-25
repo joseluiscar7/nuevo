@@ -1,0 +1,150 @@
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<title>Galería Mobile</title> 
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<link rel="stylesheet" href="lib/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.css" />
+	<link href="css/photoswipe.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/phonee.css" />	
+	<style type="text/css">
+		div.gallery-row:after { clear: both; content: "."; display: block; height: 0; visibility: hidden; }
+		div.gallery-item { float: left; width: 33.333333%; }
+		div.gallery-item a { display: block; margin: 5px; border: 1px solid #3c3c3c; }
+		div.gallery-item img { display: block; width: 100%; height: auto; }
+		#Gallery1 .ui-content{ overflow: hidden; }
+	</style>
+	
+	<script type="text/javascript" src="lib/jquery.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.mobile-1.3.2/jquery.mobile-1.3.2.min.js"></script>
+	<script type="text/javascript" src="lib/simple-inheritance.min.js"></script>
+	<script type="text/javascript" src="lib/jquery.animate-enhanced.min.js"></script>
+	<script type="text/javascript" src="lib/code-photoswipe-jQuery-1.0.11.min.js"></script>
+	
+	<script type="text/javascript">
+	
+		/*
+			Este ejemplo muestra cómo configurar PhotoSwipe usando jQuery Mobile.
+		*/
+		
+		$(document).ready(function(){
+			
+			$('div.gallery-page').live('pageshow', function(e){
+					
+				// Re-inicializar con las fotos de la página actual
+				$("div.gallery a", e.target).photoSwipe();
+				return true;
+				
+			})
+				
+		});
+	
+	</script>
+<style>
+	#titulo{
+		
+		color: #000000v;
+		 font-style:inherit;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+	}
+	
+	#tu{color: #81F79F;
+	}
+	
+	#2{
+		
+		color: #000000v;
+		 font-style:inherit;
+	font-family:Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	
+	}
+	
+	
+	#pro{
+	color: red;
+
+	}
+	           #content{
+                background-image:url(img/fondo.jpg);
+                /* background-size: 100% 100%;
+                 -moz-background-size: 100% 100%;*/
+                width: auto;
+                height: 800px;
+            }
+	
+    </style>
+ 
+
+
+
+
+</head> 
+<body> 
+
+<div data-role="page" id="Home" data-theme="c">
+
+	<div data-role="header">
+		<h1>Ni&ntilde;a Nena o simple Karly</h1>
+	</div>
+	
+	<div data-role="content"  id="content">	
+  <!--  <IMG SRC="img/fondo.jpg">-->
+
+
+          <h4 id="titulo" align="center">Hola  hize muchas locuras y la seguire haciendo por que vales demasiado para mi <br>siempre me dijiste mi pag y siempre pense en hacerla con todas las veces que ya no te busque se quedaron a medias<br> hoy la termine pero cambio un poco ahora es mobile tampoco se como una aplicacion como esta te podria servir <br>pense en agregarle una calculadora o una agenda pero solo le agregare mis valioso tesoro <h1 id="tu" css align="center" >tu
+          </h1> <br> <h4 id="titulo" align="justify">Y tu crecimiento en tu empresa sabes que te admiro por la fortaleza que tienes la pasion y determinacion para hacer tus cosas </h4>
+          <h4 id="pro" css align="justify" css color red; > Cuando un artista encuentra su inspiracion solo los dioses pueden arrebartersela y a un asi seguirira buscandola hasta Hades</h4>
+			
+		<ul data-role="listview" data-inset="true">
+			<li><a href="#Gallery1">Galería de Imágenes</a></li> 
+		</ul> 		
+			
+		 		
+	</div>
+
+	<div data-role="footer">
+		<h4>JlCL SoftFe</h4>
+	</div>
+
+</div><!-- FIN #HOME -->
+
+
+<div data-role="page" id="Gallery1" class="gallery-page">
+
+	<div data-role="header" data-theme="d">
+		<h1>Galería de Imágenes</h1>
+	</div>
+ <div class="ui-bar ui-bar-b">
+	<h3><a href="#Home" data-role="button" data-mini="true">regresar</a></h3>
+	<div data-role="content">			
+		<div class="gallery">	
+			<div class="gallery-row">		
+				<div class="gallery-item"><a href="images/full/001.jpg" rel="external"><img src="images/thumb/001.jpg" alt="Image 001" /></a></div>				
+				<div class="gallery-item"><a href="images/full/002.jpg" rel="external"><img src="images/thumb/002.jpg" alt="Image 002" /></a></div>				
+				<div class="gallery-item"><a href="images/full/003.jpg" rel="external"><img src="images/thumb/003.jpg" alt="Image 003" /></a></div>				
+			</div>		
+			<div class="gallery-row">		
+				<div class="gallery-item"><a href="images/full/004.jpg" rel="external"><img src="images/thumb/004.jpg" alt="Image 004" /></a></div>				
+				<div class="gallery-item"><a href="images/full/005.jpg" rel="external"><img src="images/thumb/005.jpg" alt="Image 005" /></a></div>				
+				<div class="gallery-item"><a href="images/full/006.jpg" rel="external"><img src="images/thumb/006.jpg" alt="Image 006" /></a></div>	
+			</div>	
+			<div class="gallery-row">		
+				<div class="gallery-item"><a href="images/full/007.jpg" rel="external"><img src="images/thumb/007.jpg" alt="Image 007" /></a></div>				
+				<div class="gallery-item"><a href="images/full/008.jpg" rel="external"><img src="images/thumb/008.jpg" alt="Image 008" /></a></div>				
+				<div class="gallery-item"><a href="images/full/009.jpg" rel="external"><img src="images/thumb/009.jpg" alt="Image 009" /></a></div>	
+			</div>	
+		</div>		
+	</div>
+	
+	<div data-role="footer">
+		<h4>JlCL SoftFe</h4>
+	</div>
+	
+</div><!-- FIN #GALLERY1 -->
+
+
+
+</body>
+</html>
